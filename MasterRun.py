@@ -43,24 +43,22 @@ class CreateDashboard():
         self.maps.add_layer_control()
         self.maps.save_dashboard()
 
-    def create_html(self):
+#     def create_html(self):
         
-from webbrowser import open_new_tab
-        f = open('dashboard.html', 'wb')
-        message = """<html>
-        <head>
-        <title>COVID-19 Statistics on %s by State</title>
-        </head>
-        </html>"""
+# from webbrowser import open_new_tab
+#         f = open('dashboard.html', 'wb')
+#         message = """<html>
+#         <head>
+#         <title>COVID-19 Statistics on %s by State</title>
+#         </head>
+#         </html>"""
 
-        whole = message %self.data_import.recent_date
+#         whole = message %self.data_import.recent_date
 
-        f.write(whole)
-        f.close()
+#         f.write(whole)
+#         f.close()
 
-        open_new_tab('dashboard.html')
-
-
+#         open_new_tab('dashboard.html')
 
 dashboard = CreateDashboard()
 dashboard.run()
